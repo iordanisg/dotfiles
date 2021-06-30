@@ -3,7 +3,8 @@ local o = vim.o
 local wo = vim.wo
 
 -- Neovim
-g.python3_host_prog = "/home/danny/.pyenv/versions/py3nvim/bin/python"
+g.python3_host_prog = "$HOME/.pyenv/versions/py3nvim/bin/python"
+g.python_host_prog = "$HOME/.pyenv/versions/py2nvim/bin/python"
 g.loaded_ruby_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_node_provider = 0
