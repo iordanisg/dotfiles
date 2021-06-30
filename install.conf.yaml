@@ -1,0 +1,52 @@
+---
+- clean:
+    - "~"
+    - "~/.config"
+
+- create:
+    - "~/personal"
+    - "~/repos"
+    - "~/tmp"
+    - "~/vimwiki"
+
+- defaults:
+    link:
+      if: '[ `uname` = Darwin ]'
+      create: true
+      force: true
+      relink: true
+
+- link:
+    ~/.p10k.zsh:
+      path: "p10k.zsh.work"
+    ~/.zshrc:
+      path: "zshrc.work"
+
+- defaults:
+    link:
+      if: '[ `uname` = Linux ]'
+      create: true
+      force: true
+      relink: true
+
+- link:
+    ~/.Xresources:
+    ~/.config/:
+      glob: true
+      path: "config/*"
+      exclude:
+        - "config/ncmpcpp"
+        - "config/mpd"
+    ~/.config/ncmpcpp/config:
+      path: "config/ncmpcpp/config"
+    ~/.config/mpd/mpd.conf:
+      if: '[ `uname` = Linux ]'
+      path: "config/mpd/mpd.conf"
+    ~/.gitconfig:
+    ~/.oh-my-zsh/custom/plugins/wttr/wttr.plugin.zsh:
+      path: scripts/wttr.plugin.zsh
+    ~/.p10k.zsh:
+      path: "p10k.zsh.home"
+    ~/.xinitrc:
+    ~/.zshrc:
+      path: "zshrc.home"

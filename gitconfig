@@ -1,0 +1,14 @@
+[user]
+	email = iordanis.grigoriou@gmail.com
+	name = Iordanis Grigoriou
+[pull]
+	rebase = false
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	confictstyle = diff3
+[mergetool]
+	prompt = false
+[difftool]
+	prompt = false

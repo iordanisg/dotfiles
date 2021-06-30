@@ -1,0 +1,45 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "nvim",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Alacritty$",
+         "instance": "^vimwiki$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "taskwarrior-tui",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Alacritty$",
+         "instance": "^taskwarrior$"
+       }
+    ],
+    "type": "con"
+}
+

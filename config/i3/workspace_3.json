@@ -1,0 +1,77 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "ncmpcpp 0.9.2",
+            "percent": 0.5,
+            "swallows": [
+               {
+                 "class": "^Alacritty$",
+                 "instance": "^ncmpcpp$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "ncmpcpp 0.9.2",
+            "percent": 0.5,
+            "swallows": [
+               {
+                 "class": "^Alacritty$",
+                 "instance": "^ncmpcpp$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "castero",
+    "percent": 0.5,
+    "swallows": [
+       {
+         "class": "^Alacritty$",
+         "instance": "^castero$"
+       }
+    ],
+    "type": "con"
+}
+

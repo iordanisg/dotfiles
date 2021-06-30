@@ -1,0 +1,4 @@
+configuration {
+	terminal: "/usr/bin/alacritty";
+	theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
+}

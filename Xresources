@@ -1,0 +1,9 @@
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+#include "/home/danny/repos/Xresources-themes/base16-gruvbox-dark-medium-256.Xresources"
