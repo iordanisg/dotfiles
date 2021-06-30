@@ -17,8 +17,12 @@
       relink: true
 
 - link:
+    ~/.config/nvim:
+      path: "config/nvim"
     ~/.p10k.zsh:
       path: "p10k.zsh.work"
+    ~/.tmux.conf:
+      path: "tmux.conf.work"
     ~/.zshrc:
       path: "zshrc.work"
 
