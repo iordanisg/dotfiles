@@ -9,29 +9,11 @@
     - "~/tmp"
     - "~/vimwiki"
 
-- defaults:
-    link:
-      if: '[ `uname` = Darwin ]'
-      create: true
-      force: true
-      relink: true
-
-- link:
-    ~/.config/nvim:
-      path: "config/nvim"
-    ~/.p10k.zsh:
-      path: "p10k.zsh.work"
-    ~/.tmux.conf:
-      path: "tmux.conf.work"
-    ~/.zshrc:
-      path: "zshrc.work"
-
+# Home
 - defaults:
     link:
       if: '[ `uname` = Linux ]'
       create: true
-      force: true
-      relink: true
 
 - link:
     ~/.Xresources:
@@ -54,3 +36,19 @@
     ~/.xinitrc:
     ~/.zshrc:
       path: "zshrc.home"
+
+# Work
+- defaults:
+    link:
+      if: '[ `uname` = Darwin ]'
+      create: true
+
+- link:
+    ~/.config/nvim:
+      path: "config/nvim"
+    ~/.p10k.zsh:
+      path: "p10k.zsh.work"
+    ~/.tmux.conf:
+      path: "tmux.conf.work"
+    ~/.zshrc:
+      path: "zshrc.work"
