@@ -119,12 +119,18 @@ alias vi="nvim"
 alias ls="exa"
 alias la="exa -la"
 
-# FZF
+# fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 # pyenv
 eval "$(pyenv init -)"
+
+# McFly
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=true
+export MCFLY_RESULTS=25
+eval "$(mcfly init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
