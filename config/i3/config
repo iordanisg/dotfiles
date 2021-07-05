@@ -23,16 +23,16 @@ bindsym Mod1+Return exec alacritty
 bindsym Mod1+Shift+q kill
 
 # start rofi program launcher
-bindsym Mod1+d exec "rofi -modi ssh,window,drun,run -show drun"
+bindsym Mod1+d exec --no-startup-id "rofi -modi ssh,window,drun,run -show drun"
 
 # start rofi-pass
-bindsym Mod1+Shift+p exec "rofi-pass"
+bindsym Mod1+Shift+p exec --no-startup-id "rofi-pass"
 
 # start buku_run
-bindsym Mod1+b exec "buku_run"
+bindsym Mod1+b exec --no-startup-id "buku_run"
 
 # open clipboard manager
-bindsym Mod1+p exec "clipcat-menu"
+bindsym Mod1+p exec --no-startup-id "clipcat-menu"
 
 # lock the screen
 bindsym Mod1+Shift+x exec --no-startup-id i3lock-fancy-rapid 5 1 --bar-indicator --bar-orientation=vertical
