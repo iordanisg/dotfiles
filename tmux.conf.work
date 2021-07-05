@@ -121,8 +121,8 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-yank'
 #set -g @plugin "arcticicestudio/nord-tmux"
- set -g @plugin 'egel/tmux-gruvbox'
- set -g @tmux-gruvbox 'dark' # or 'light'
+set -g @plugin 'egel/tmux-gruvbox'
+set -g @tmux-gruvbox 'dark' # or 'light'
 
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-save-shell-history 'on'
