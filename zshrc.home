@@ -118,6 +118,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias ls="exa"
 alias la="exa -la"
+alias df="duf"
 
 # fzf
 source /usr/share/fzf/completion.zsh
