@@ -120,8 +120,8 @@ alias vim="nvim"
 alias vi="nvim"
 alias ls="exa"
 alias la="exa -la"
-alias passwork="PASSWORD_STORE_DIR=~/.password-store pass"
-alias passhome="PASSWORD_STORE_DIR=~/personal/danny/danny-pass pass"
+alias cat="bat"
+alias df="duf"
 alias k="kubectl"
 
 export LC_ALL=en_US.UTF-8
@@ -129,6 +129,9 @@ export EDITOR=nvim
 
 export HOMEBREW_GITHUB_API_TOKEN=d7328ad0b50030137295c9545dc3b7cc87b7b8df
 export DISABLE_MAGIC_FUNCTIONS=true
+
+# tmux
+export DISABLE_AUTO_TITLE="true"
 
 # Golang
 export GOPATH=$HOME/go
