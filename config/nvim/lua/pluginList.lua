@@ -29,11 +29,13 @@ return packer.startup(function()
   })
 
   -- Bufferline
+  -- TODO: Figure out why this breaks Telescope only on OSX (!)
   use({
     'akinsho/nvim-bufferline.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
     after = 'gruvbox.nvim',
     config = function()
-      require('plugins.bufferline')
+      require('bufferline').setup({})
     end,
   })
 
