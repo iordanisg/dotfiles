@@ -47,18 +47,18 @@ map('i', '<CR>', 'v:lua.completions()', { expr = true })
 map('n', '<Leader>e', ':NvimTreeToggle<CR>', opt)
 
 -- telescope
-map('n', '<Leader>ff', ':Telescope find_files <CR>', opt)
-map('n', '<Leader>fF', ':Telescope oldfiles<CR>', opt)
-map('n', '<Leader>fC', ':Telescope command_history<CR>', opt)
-map('n', '<Leader>fg', ':Telescope live_grep<CR>', opt)
-map('n', '<Leader>fG', ':Telescope grep_string<CR>', opt)
-map('n', '<Leader>fm', ':Telescope marks<CR>', opt)
-map('n', '<Leader>gs', ':Telescope git_status <CR>', opt)
-map('n', '<Leader>gc', ':Telescope git_commits <CR>', opt)
-map('n', '<Leader>fp', ':Telescope media_files <CR>', opt)
-map('n', '<Leader>fb', ':Telescope buffers<CR>', opt)
-map('n', '<Leader>fh', ':Telescope help_tags<CR>', opt)
-map('n', '<Leader>lr', ':Telescope lsp_references<CR>', opt)
+map('n', '<Leader>ff', '<cmd>Telescope find_files <CR>', opt)
+map('n', '<Leader>fF', '<cmd>Telescope oldfiles<CR>', opt)
+map('n', '<Leader>fC', '<cmd>Telescope command_history<CR>', opt)
+map('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', opt)
+map('n', '<Leader>fG', '<cmd>Telescope grep_string<CR>', opt)
+map('n', '<Leader>fm', '<cmd>Telescope marks<CR>', opt)
+map('n', '<Leader>gs', '<cmd>Telescope git_status <CR>', opt)
+map('n', '<Leader>gc', '<cmd>Telescope git_commits <CR>', opt)
+map('n', '<Leader>fp', '<cmd>Telescope media_files <CR>', opt)
+map('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opt)
+map('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opt)
+map('n', '<Leader>lr', '<cmd>Telescope lsp_references<CR>', opt)
 
 -- TODO: do I need these mappings?
 -- bufferline tab stuff
@@ -80,6 +80,11 @@ map('n', '<leader>xd', '<cmd>Trouble lsp_document_diagnostics<cr>', { silent = t
 map('n', '<leader>xl', '<cmd>Trouble loclist<cr>', { silent = true, noremap = true })
 map('n', '<leader>xq', '<cmd>Trouble quickfix<cr>', { silent = true, noremap = true })
 map('n', '<leader>xr', '<cmd>Trouble lsp_references<cr>', { silent = true, noremap = true })
+
+-- todo-comments.nvim
+map('n', '<Leader>TX', '<cmd>TodoTrouble<CR>', opt)
+map('n', '<Leader>TQ', '<cmd>TodoQuickFix<CR>', opt)
+map('n', '<Leader>TT', '<cmd>TodoTelescope<CR>', opt)
 
 -- Packer commands till because we are not loading it at startup
 vim.cmd("silent! command PackerCompile lua require 'pluginList' require('packer').compile()")
