@@ -40,8 +40,9 @@ return packer.startup(function()
   })
 
   -- Statusline
+  -- TODO: Figure outt why this breaks Telescope
   use({
-    'glepnir/galaxyline.nvim',
+    'ojroques/nvim-hardline',
     after = 'gruvbox.nvim',
     config = function()
       require('plugins.statusline')

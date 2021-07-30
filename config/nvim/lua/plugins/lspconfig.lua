@@ -66,7 +66,7 @@ local efm_settings = {
       { formatCommand = 'gofumpt', formatStdin = true },
     },
     lua = {
-      { formatCommand = 'stylua - --config-path ~/.config/stylua/stylua.toml', formatStdin = true },
+      { formatCommand = 'stylua - --config-path ~/.config/nvim/stylua.toml', formatStdin = true },
     },
     json = {
       { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true },
