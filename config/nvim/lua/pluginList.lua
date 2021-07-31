@@ -22,7 +22,7 @@ return packer.startup(function()
   -- TODO: Figure out why errors are being thrown if this plugin is loaded after Telescope
   use({
     'akinsho/nvim-toggleterm.lua',
-    keys = [[<C-\>]],
+    event = 'BufWinEnter',
     config = function()
       require('plugins.toggleterm')
     end,
@@ -152,12 +152,12 @@ return packer.startup(function()
 
   use({
     'nvim-lua/plenary.nvim',
-    event = 'BufRead',
+    -- event = 'BufRead',
   })
 
   use({
     'nvim-lua/popup.nvim',
-    after = 'plenary.nvim',
+    -- after = 'plenary.nvim',
   })
 
   use({
@@ -180,7 +180,10 @@ return packer.startup(function()
 
   use({
     'lewis6991/gitsigns.nvim',
-    after = 'plenary.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+    },
+    event = 'BufRead',
     config = function()
       require('plugins.gitsigns')
     end,
