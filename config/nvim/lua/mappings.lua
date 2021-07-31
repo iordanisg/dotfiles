@@ -70,8 +70,8 @@ map('n', '<S-x>', ':bd!<CR>', opt) -- close tab
 map('n', '<TAB>', ':BufferLineCycleNext<CR>', opt)
 map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', opt)
 
--- vim~Fugitive
-map('n', '<Leader>G', ':Git<CR>', opt)
+-- vim-fugitive
+map('n', '<Leader>g', ':Git<CR>', opt)
 
 -- trouble.nvim
 map('n', '<leader>xx', '<cmd>TroubleToggle<cr>', { silent = true, noremap = true })
