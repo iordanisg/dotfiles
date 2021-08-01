@@ -25,7 +25,7 @@ compe.setup({
     luasnip = true,
     vsnip = false,
     ultisnips = false,
-    spell = { filetypes = { 'gitcommit', 'markdown' } },
+    spell = { filetypes = { 'gitcommit', 'markdown', 'vimwiki' } },
     tags = false,
     treesitter = false,
     neorg = true,
