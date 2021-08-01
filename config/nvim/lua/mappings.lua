@@ -82,9 +82,9 @@ map('n', '<leader>xq', '<cmd>Trouble quickfix<cr>', { silent = true, noremap = t
 map('n', '<leader>xr', '<cmd>Trouble lsp_references<cr>', { silent = true, noremap = true })
 
 -- todo-comments.nvim
-map('n', '<Leader>TX', '<cmd>TodoTrouble<CR>', opt)
-map('n', '<Leader>TQ', '<cmd>TodoQuickFix<CR>', opt)
-map('n', '<Leader>TT', '<cmd>TodoTelescope<CR>', opt)
+map('n', '<Leader>tx', '<cmd>TodoTrouble<CR>', opt)
+map('n', '<Leader>tq', '<cmd>TodoQuickFix<CR>', opt)
+map('n', '<Leader>tt', '<cmd>TodoTelescope<CR>', opt)
 
 -- Packer commands till because we are not loading it at startup
 vim.cmd("silent! command PackerCompile lua require 'pluginList' require('packer').compile()")
