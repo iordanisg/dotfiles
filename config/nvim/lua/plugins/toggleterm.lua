@@ -5,7 +5,7 @@ end
 
 terminal.setup({
   size = 20,
-  open_mapping = [[<C-\>]],
+  open_mapping = [[<Leader>T]],
   persist_size = true,
   shade_terminals = true,
   start_in_insert = true,
