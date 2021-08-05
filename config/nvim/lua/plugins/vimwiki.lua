@@ -9,6 +9,8 @@ vim.g.vimwiki_list = {
   {
     path = '~/vimwiki/work',
     name = 'work',
+    syntax = 'markdown',
+    ext = '.md',
     automatic_nested_syntaxes = 1,
   },
 }
