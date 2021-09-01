@@ -42,6 +42,7 @@
     link:
       if: '[ `uname` = Darwin ]'
       create: true
+      force: true
 
 - link:
     ~/.config/nvim:
