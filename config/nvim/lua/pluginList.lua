@@ -40,7 +40,7 @@ return packer.startup(function()
   })
 
   -- Statusline
-  -- TODO: Figure outt why this breaks Telescope
+  -- TODO: Figure out why this breaks Telescope
   use({
     'ojroques/nvim-hardline',
     after = 'gruvbox.nvim',
@@ -109,6 +109,7 @@ return packer.startup(function()
     event = 'BufRead',
   })
 
+  -- TODO: switch to https://github.com/hrsh7th/nvim-cmp
   use({
     'hrsh7th/nvim-compe',
     event = 'InsertEnter',

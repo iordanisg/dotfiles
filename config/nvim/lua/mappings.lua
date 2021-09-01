@@ -61,12 +61,6 @@ map('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', opt)
 map('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', opt)
 map('n', '<Leader>lr', '<cmd>Telescope lsp_references<CR>', opt)
 
--- TODO: do I need these mappings?
--- bufferline tab stuff
-map('n', '<S-t>', ':enew<CR>', opt) -- new buffer
-map('n', '<C-t>b', ':tabnew<CR>', opt) -- new tab
-map('n', '<S-x>', ':bd!<CR>', opt) -- close tab
-
 -- nvim-bufferline
 map('n', '<TAB>', ':BufferLineCycleNext<CR>', opt)
 map('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', opt)
