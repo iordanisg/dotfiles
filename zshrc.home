@@ -120,6 +120,10 @@ alias ls="exa"
 alias la="exa -la"
 alias df="duf"
 
+# Golang
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
+
 # fzf
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
