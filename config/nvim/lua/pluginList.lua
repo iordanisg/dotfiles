@@ -162,7 +162,6 @@ return packer.startup(function()
 
   use({
     'nvim-telescope/telescope.nvim',
-    cmd = 'Telescope',
     config = function()
       require('plugins.telescope')
     end,
@@ -171,11 +170,9 @@ return packer.startup(function()
   use({
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make',
-    cmd = 'Telescope',
   })
   use({
     'nvim-telescope/telescope-media-files.nvim',
-    cmd = 'Telescope',
   })
 
   use({
@@ -289,6 +286,13 @@ return packer.startup(function()
     'vimwiki/vimwiki',
     config = function()
       require('plugins.vimwiki')
+    end,
+  })
+
+  use({
+    'pwntester/octo.nvim',
+    config = function()
+      require('plugins.octo')
     end,
   })
 end)
