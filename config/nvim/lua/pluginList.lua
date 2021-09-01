@@ -235,11 +235,6 @@ return packer.startup(function()
   })
 
   use({
-    'tversteeg/registers.nvim',
-    event = 'BufRead',
-  })
-
-  use({
     'tpope/vim-unimpaired',
     event = 'BufRead',
   })
