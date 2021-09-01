@@ -63,6 +63,17 @@ telescope.setup({
       find_cmd = 'rg', -- find command (defaults to `fd`)
     },
   },
+  pickers = {
+    buffers = {
+      show_all_buffers = true,
+      sort_lastused = true,
+      mappings = {
+        i = {
+          ['<c-d>'] = 'delete_buffer',
+        },
+      },
+    },
+  },
 })
 
 if not pcall(function()
