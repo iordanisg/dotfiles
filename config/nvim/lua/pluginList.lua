@@ -277,7 +277,12 @@ return packer.startup(function()
     event = 'BufRead',
   })
 
-  use('rmagatti/auto-session')
+  use({
+    'rmagatti/auto-session',
+    config = function()
+      require('plugins.autosession')
+    end,
+  })
 
   -- TODO: is there a way to lazy load vimwiki?
   use({
