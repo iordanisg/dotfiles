@@ -1,3 +1,5 @@
+-- Plugin resources: https://github.com/rockerBOO/awesome-neovim
+
 local present, _ = pcall(require, 'packerInit')
 local packer
 
@@ -224,6 +226,7 @@ return packer.startup(function()
     cmd = { '<cmd>lua _lazygit_toggle()<CR>' },
   })
 
+  -- TODO: consider using https://github.com/ggandor/lightspeed.nvim
   use({
     'justinmk/vim-sneak',
     event = 'BufRead',
