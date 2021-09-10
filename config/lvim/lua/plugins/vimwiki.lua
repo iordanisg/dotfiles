@@ -1,5 +1,3 @@
-local opts = {}
-
 vim.g.vimwiki_list = {
   {
     path = '~/vimwiki/personal',
@@ -26,6 +24,3 @@ vim.g.vimwiki_table_mappings = 0
 vim.g.vimwiki_table_mappings = 0
 vim.g.vimwiki_table_auto_fmt = 0
 vim.g.vimwiki_global_ext = 0
-
-vim.api.nvim_set_keymap('n', '<Leader>we', '<Plug>VimwikiSplitLink', opts)
-vim.api.nvim_set_keymap('n', '<Leader>wq', '<Plug>VimwikiVSplitLink', opts)

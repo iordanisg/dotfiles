@@ -11,7 +11,8 @@ an executable
 -- general
 lvim.log.level = 'warn'
 lvim.format_on_save = true
-lvim.colorscheme = 'onedarker'
+vim.g.gruvbox_contrast_dark = 'hard'
+lvim.colorscheme = 'gruvbox'
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = 'space'
@@ -46,7 +47,13 @@ lvim.builtin.which_key.mappings['t'] = {
   l = { '<cmd>Trouble loclist<cr>', 'LocationList' },
   w = { '<cmd>Trouble lsp_workspace_diagnostics<cr>', 'Diagnosticss' },
 }
+lvim.builtin.which_key.mappings['g']['G'] = { '<cmd>Neogit<CR>', 'Neogit' }
 lvim.builtin.which_key.mappings['s']['T'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
+lvim.builtin.which_key.mappings['s']['s'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
+lvim.builtin.which_key.mappings['s']['S'] = {
+  "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+  'Spectre current word',
+}
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -110,6 +117,12 @@ lvim.lang.lua.formatters = {
     args = {},
   },
 }
+lvim.lang.sh.formatters = {
+  {
+    exe = 'shfmt',
+    args = {},
+  },
+}
 -- set an additional linter
 lvim.lang.python.linters = {
   {
@@ -120,11 +133,10 @@ lvim.lang.python.linters = {
 
 -- Additional Plugins
 lvim.plugins = {
-  {
-    'ellisonleao/gruvbox.nvim',
-    requires = { 'rktjmp/lush.nvim' },
-  },
+  -- Color schemes
+  { 'ellisonleao/gruvbox.nvim', requires = { 'rktjmp/lush.nvim' } },
   { 'shaunsingh/nord.nvim' },
+  -- LSP
   {
     'ray-x/lsp_signature.nvim',
     config = function()
@@ -132,10 +144,8 @@ lvim.plugins = {
     end,
     event = 'InsertEnter',
   },
-  {
-    'folke/trouble.nvim',
-    cmd = 'TroubleToggle',
-  },
+  { 'folke/trouble.nvim', cmd = 'TroubleToggle' },
+  -- Git
   {
     'TimUntersberger/neogit',
     requires = {
@@ -148,6 +158,25 @@ lvim.plugins = {
           diffview = true,
         },
       })
+    end,
+  },
+  {
+    'pwntester/octo.nvim',
+    config = function()
+      require('plugins.octo')
+    end,
+  },
+  -- Quickfix
+  { 'kevinhwang91/nvim-bqf', event = 'BufRead' },
+  -- Spectre
+  { 'windwp/nvim-spectre', event = 'BufRead' },
+  -- tpope
+  { 'tpope/vim-surround' },
+  -- vimwiki
+  {
+    'vimwiki/vimwiki',
+    config = function()
+      require('plugins.vimwiki')
     end,
   },
 }
