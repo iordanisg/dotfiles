@@ -42,10 +42,13 @@
     link:
       if: '[ `uname` = Darwin ]'
       create: true
+      force: true
 
 - link:
     ~/.config/nvim:
       path: "config/nvim"
+    ~/.config/lvim:
+      path: "config/lvim"
     ~/.p10k.zsh:
       path: "p10k.zsh.work"
     ~/.tmux.conf:

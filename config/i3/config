@@ -232,11 +232,6 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout ~/.config/i3/workspace_
 exec --no-startup-id alacritty --class vimwiki -e nvim /home/danny/vimwiki/personal/index.wiki
 exec --no-startup-id alacritty --class taskwarrior -e taskwarrior-tui
 
-exec --no-startup-id "i3-msg 'workspace 3; append_layout ~/.config/i3/workspace_3.json'"
-exec --no-startup-id alacritty --class castero -e castero
-exec --no-startup-id alacritty --class ncmpcpp -e ncmpcpp
-exec --no-startup-id alacritty --class ncmpcpp -e ncmpcpp
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
