@@ -48,10 +48,10 @@ lvim.builtin.which_key.mappings['t'] = {
   l = { '<cmd>Trouble loclist<cr>', 'LocationList' },
   w = { '<cmd>Trouble lsp_workspace_diagnostics<cr>', 'Diagnosticss' },
 }
-lvim.builtin.which_key.mappings['g']['G'] = { '<cmd>G<CR>', 'Fugitive' }
-lvim.builtin.which_key.mappings['s']['T'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
-lvim.builtin.which_key.mappings['s']['s'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
-lvim.builtin.which_key.mappings['s']['S'] = {
+lvim.builtin.which_key.mappings['gG'] = { '<cmd>G<CR>', 'Fugitive' }
+lvim.builtin.which_key.mappings['sT'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
+lvim.builtin.which_key.mappings['ss'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
+lvim.builtin.which_key.mappings['sS'] = {
   "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
   'Spectre current word',
 }
