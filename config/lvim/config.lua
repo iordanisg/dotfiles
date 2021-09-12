@@ -38,6 +38,7 @@ lvim.keys.normal_mode['<C-s>'] = ':w<cr>'
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings['P'] = { '<cmd>Telescope projects<CR>', 'Projects' }
+lvim.builtin.which_key.mappings['r'] = { '<cmd>RnvimrToggle<CR>', 'Ranger' }
 lvim.builtin.which_key.mappings['t'] = {
   name = '+Trouble',
   r = { '<cmd>Trouble lsp_references<cr>', 'References' },
@@ -47,7 +48,7 @@ lvim.builtin.which_key.mappings['t'] = {
   l = { '<cmd>Trouble loclist<cr>', 'LocationList' },
   w = { '<cmd>Trouble lsp_workspace_diagnostics<cr>', 'Diagnosticss' },
 }
-lvim.builtin.which_key.mappings['g']['G'] = { '<cmd>Neogit<CR>', 'Neogit' }
+lvim.builtin.which_key.mappings['g']['G'] = { '<cmd>G<CR>', 'Fugitive' }
 lvim.builtin.which_key.mappings['s']['T'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
 lvim.builtin.which_key.mappings['s']['s'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
 lvim.builtin.which_key.mappings['s']['S'] = {
@@ -133,46 +134,100 @@ lvim.lang.python.linters = {
 
 -- Additional Plugins
 lvim.plugins = {
-  -- Color schemes
-  { 'ellisonleao/gruvbox.nvim', requires = { 'rktjmp/lush.nvim' } },
-  { 'shaunsingh/nord.nvim' },
-  -- LSP
+  -- colorschemes
+  {
+    'ellisonleao/gruvbox.nvim',
+    requires = { 'rktjmp/lush.nvim' },
+  },
+  {
+    'shaunsingh/nord.nvim',
+  },
+  -- lsp
   {
     'ray-x/lsp_signature.nvim',
-    config = function()
-      require('lsp_signature').on_attach()
-    end,
     event = 'InsertEnter',
-  },
-  { 'folke/trouble.nvim', cmd = 'TroubleToggle' },
-  -- Git
-  {
-    'TimUntersberger/neogit',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'sindrets/diffview.nvim',
-    },
     config = function()
-      require('neogit').setup({
-        integrations = {
-          diffview = true,
-        },
-      })
+      require('lsp_signature').setup()
     end,
+  },
+  {
+    'folke/trouble.nvim',
+    cmd = 'TroubleToggle',
+  },
+  -- git
+  {
+    'tpope/vim-fugitive',
+    cmd = {
+      'G',
+      'Git',
+      'Gdiffsplit',
+      'Gread',
+      'Gwrite',
+      'Ggrep',
+      'GMove',
+      'GDelete',
+      'GBrowse',
+      'GRemove',
+      'GRename',
+      'Glgrep',
+      'Gedit',
+    },
+    ft = { 'fugitive' },
+  },
+  {
+    'sindrets/diffview.nvim',
+    event = 'BufRead',
   },
   {
     'pwntester/octo.nvim',
+    event = 'BufRead',
     config = function()
       require('plugins.octo')
     end,
   },
-  -- Quickfix
-  { 'kevinhwang91/nvim-bqf', event = 'BufRead' },
-  -- Spectre
-  { 'windwp/nvim-spectre', event = 'BufRead' },
-  -- tpope
-  { 'tpope/vim-surround' },
-  -- vimwiki
+  -- navigation
+  {
+    'kevinhwang91/nvim-bqf',
+    event = { 'BufRead', 'BufNew' },
+  },
+  {
+    'windwp/nvim-spectre',
+    event = 'BufRead',
+  },
+  {
+    'kevinhwang91/rnvimr',
+    cmd = 'RnvimrToggle',
+    config = function()
+      require('plugins.rnvimr')
+    end,
+  },
+  -- general
+  {
+    'tpope/vim-surround',
+    keys = { 'c', 'd', 'y' },
+  },
+  {
+    'tpope/vim-repeat',
+  },
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    event = 'BufRead',
+    setup = function()
+      require('plugins.indent-blankline')
+    end,
+  },
+  {
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && npm install',
+    ft = 'markdown',
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
+  {
+    'folke/todo-comments.nvim',
+    event = 'BufRead',
+  },
   {
     'vimwiki/vimwiki',
     config = function()
