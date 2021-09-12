@@ -121,9 +121,6 @@ lvim.plugins = {
     'ellisonleao/gruvbox.nvim',
     requires = { 'rktjmp/lush.nvim' },
   },
-  {
-    'shaunsingh/nord.nvim',
-  },
   -- lsp
   {
     'ray-x/lsp_signature.nvim',
