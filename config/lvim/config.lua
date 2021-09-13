@@ -103,11 +103,11 @@ lvim.lang.go.formatters = {
   { exe = 'goimports' },
   { exe = 'gofumpt' },
 }
-lvim.lang.python.formatters = {
-  { exe = 'black' },
-}
 lvim.lang.lua.formatters = {
   { exe = 'stylua' },
+}
+lvim.lang.python.formatters = {
+  { exe = 'black' },
 }
 lvim.lang.sh.formatters = {
   { exe = 'shfmt' },
