@@ -9,8 +9,11 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
+vim.opt.timeoutlen = 400
+
 lvim.log.level = 'warn'
 lvim.format_on_save = true
+
 vim.g.gruvbox_contrast_dark = 'hard'
 lvim.colorscheme = 'gruvbox'
 
