@@ -9,7 +9,7 @@ an executable
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-vim.opt.timeoutlen = 400
+vim.opt.timeoutlen = 250
 
 lvim.log.level = 'warn'
 lvim.format_on_save = true
