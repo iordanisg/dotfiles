@@ -112,6 +112,9 @@ lvim.lang.lua.formatters = {
 lvim.lang.sh.formatters = {
   { exe = 'shfmt' },
 }
+lvim.lang.terraform.formatters = {
+  { exe = 'terraform_fmt' },
+}
 -- set an additional linter
 lvim.lang.python.linters = {
   { exe = 'flake8' },
