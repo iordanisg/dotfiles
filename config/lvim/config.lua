@@ -171,7 +171,7 @@ lvim.plugins = {
     'pwntester/octo.nvim',
     event = 'BufRead',
     config = function()
-      require('plugins.octo')
+      require('user.octo')
     end,
   },
   -- navigation
@@ -187,7 +187,7 @@ lvim.plugins = {
     'kevinhwang91/rnvimr',
     cmd = 'RnvimrToggle',
     config = function()
-      require('plugins.rnvimr')
+      require('user.rnvimr')
     end,
   },
   -- general
@@ -202,7 +202,7 @@ lvim.plugins = {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead',
     setup = function()
-      require('plugins.indent-blankline')
+      require('user.indent-blankline')
     end,
   },
   {
@@ -220,7 +220,7 @@ lvim.plugins = {
   {
     'vimwiki/vimwiki',
     config = function()
-      require('plugins.vimwiki')
+      require('user.vimwiki')
     end,
   },
 }
