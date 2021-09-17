@@ -40,6 +40,7 @@ lvim.keys.normal_mode['<C-s>'] = ':w<cr>'
 -- end
 
 -- Use which-key to add extra bindings with the leader-key prefix
+lvim.builtin.which_key.mappings['G'] = { '<cmd>G<CR>', 'Fugitive' }
 lvim.builtin.which_key.mappings['P'] = { '<cmd>Telescope projects<CR>', 'Projects' }
 lvim.builtin.which_key.mappings['r'] = { '<cmd>RnvimrToggle<CR>', 'Ranger' }
 lvim.builtin.which_key.mappings['t'] = {
@@ -51,7 +52,6 @@ lvim.builtin.which_key.mappings['t'] = {
   l = { '<cmd>Trouble loclist<cr>', 'LocationList' },
   w = { '<cmd>Trouble lsp_workspace_diagnostics<cr>', 'Diagnosticss' },
 }
-lvim.builtin.which_key.mappings['gG'] = { '<cmd>G<CR>', 'Fugitive' }
 lvim.builtin.which_key.mappings['sT'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
 lvim.builtin.which_key.mappings['ss'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
 lvim.builtin.which_key.mappings['sS'] = {
