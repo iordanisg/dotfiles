@@ -140,6 +140,10 @@ lvim.plugins = {
     end,
   },
   {
+    'simrat39/symbols-outline.nvim',
+    cmd = 'SymbolsOutline',
+  },
+  {
     'folke/trouble.nvim',
     cmd = 'TroubleToggle',
   },
