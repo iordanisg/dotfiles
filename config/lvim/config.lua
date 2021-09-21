@@ -134,7 +134,7 @@ lvim.plugins = {
   -- lsp
   {
     'ray-x/lsp_signature.nvim',
-    event = 'InsertEnter',
+    event = 'BufRead',
     config = function()
       require('lsp_signature').setup()
     end,
