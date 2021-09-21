@@ -230,6 +230,7 @@ lvim.plugins = {
       require('user.vimwiki')
     end,
   },
+  { 'google/vim-jsonnet' },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
