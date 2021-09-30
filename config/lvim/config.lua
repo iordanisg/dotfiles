@@ -231,6 +231,7 @@ lvim.plugins = {
     end,
   },
   { 'google/vim-jsonnet' },
+  { 'towolf/vim-helm' },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
