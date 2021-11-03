@@ -14,8 +14,11 @@ vim.opt.timeoutlen = 250
 lvim.log.level = 'warn'
 lvim.format_on_save = true
 
-vim.g.gruvbox_contrast_dark = 'hard'
-lvim.colorscheme = 'gruvbox'
+vim.g.gruvbox_material_background = 'hard'
+vim.g.gruvbox_material_enable_italic = 1
+vim.g.gruvbox_material_enable_bold = 1
+vim.g.gruvbox_material_palette = 'original'
+lvim.colorscheme = 'gruvbox-material'
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = 'space'
