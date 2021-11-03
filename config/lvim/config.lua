@@ -130,10 +130,7 @@ lvim.lang.python.linters = {
 -- Additional Plugins
 lvim.plugins = {
   -- colorschemes
-  {
-    'ellisonleao/gruvbox.nvim',
-    requires = { 'rktjmp/lush.nvim' },
-  },
+  { 'sainnhe/gruvbox-material' },
   -- lsp
   {
     'ray-x/lsp_signature.nvim',
