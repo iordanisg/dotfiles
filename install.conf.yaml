@@ -45,6 +45,8 @@
       force: true
 
 - link:
+    ~/.config/alacritty/alacritty.yml:
+      path: "config/alacritty/alacritty.yml.work"
     ~/.config/nvim:
       path: "config/nvim"
     ~/.config/lvim:
