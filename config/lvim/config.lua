@@ -67,9 +67,9 @@ lvim.builtin.which_key.mappings['sS'] = {
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = 'left'
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.show_icons.git = 1
 
-local components = require('core.lualine.components')
+local components = require('lvim.core.lualine.components')
 lvim.builtin.lualine.sections.lualine_y = { components.location }
 lvim.builtin.lualine.sections.lualine_z = { components.scrollbar }
 
