@@ -23,6 +23,8 @@
       exclude:
         - "config/ncmpcpp"
         - "config/mpd"
+    ~/.config/alacritty/alacritty.yml:
+      path: "config/alacritty/alacritty.yml.home"
     ~/.config/ncmpcpp/config:
       path: "config/ncmpcpp/config"
     ~/.config/mpd/mpd.conf:
