@@ -222,13 +222,6 @@ lvim.plugins = {
     'sindrets/diffview.nvim',
     event = 'BufRead',
   },
-  {
-    'pwntester/octo.nvim',
-    event = 'BufRead',
-    config = function()
-      require('user.octo')
-    end,
-  },
   -- navigation
   {
     'kevinhwang91/nvim-bqf',
