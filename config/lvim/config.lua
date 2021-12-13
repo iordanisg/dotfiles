@@ -238,6 +238,9 @@ lvim.plugins = {
   {
     'kevinhwang91/nvim-bqf',
     event = { 'BufRead', 'BufNew' },
+    config = function()
+      require('user.nvim-bqf')
+    end,
   },
   {
     'windwp/nvim-spectre',
