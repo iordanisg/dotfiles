@@ -258,9 +258,7 @@ lvim.plugins = {
     'tpope/vim-surround',
     keys = { 'c', 'd', 'y' },
   },
-  {
-    'tpope/vim-repeat',
-  },
+  { 'tpope/vim-repeat' },
   {
     'lukas-reineke/indent-blankline.nvim',
     event = 'BufRead',
