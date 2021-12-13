@@ -125,7 +125,6 @@ alias g="git"
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 
-export HOMEBREW_GITHUB_API_TOKEN=d7328ad0b50030137295c9545dc3b7cc87b7b8df
 export DISABLE_MAGIC_FUNCTIONS=true
 
 # tmux
