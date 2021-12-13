@@ -101,6 +101,11 @@ local components = require('lvim.core.lualine.components')
 lvim.builtin.lualine.sections.lualine_y = { components.location }
 lvim.builtin.lualine.sections.lualine_z = { components.scrollbar }
 
+-- Override execs to remove <C-\> keymapping
+lvim.builtin.terminal.execs = {
+  { 'lazygit', '<leader>gg', 'LazyGit', 'float' },
+}
+
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
