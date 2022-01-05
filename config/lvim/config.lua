@@ -300,6 +300,12 @@ lvim.plugins = {
       })
     end,
   },
+  {
+    'aserowy/tmux.nvim',
+    config = function()
+      require('user.tmux')
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
