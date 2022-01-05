@@ -11,6 +11,7 @@ an executable
 -- general
 vim.opt.timeoutlen = 250
 vim.opt.relativenumber = true
+vim.opt.background = 'light'
 
 lvim.log.level = 'warn'
 lvim.format_on_save = true
