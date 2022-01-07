@@ -12,6 +12,7 @@ an executable
 vim.opt.timeoutlen = 250
 vim.opt.relativenumber = true
 vim.opt.background = 'light'
+vim.opt.foldlevel = 1
 
 lvim.log.level = 'warn'
 lvim.format_on_save = true
@@ -70,13 +71,13 @@ lvim.builtin.which_key.mappings['S'] = {
 }
 lvim.builtin.which_key.mappings['r'] = { '<cmd>RnvimrToggle<CR>', 'Ranger' }
 lvim.builtin.which_key.mappings['t'] = {
-  name = '+Trouble',
-  r = { '<cmd>Trouble lsp_references<cr>', 'References' },
-  f = { '<cmd>Trouble lsp_definitions<cr>', 'Definitions' },
-  d = { '<cmd>Trouble lsp_document_diagnostics<cr>', 'Diagnosticss' },
-  q = { '<cmd>Trouble quickfix<cr>', 'QuickFix' },
-  l = { '<cmd>Trouble loclist<cr>', 'LocationList' },
-  w = { '<cmd>Trouble lsp_workspace_diagnostics<cr>', 'Diagnosticss' },
+  name = 'Diagnostics',
+  t = { '<cmd>TroubleToggle<cr>', 'trouble' },
+  w = { '<cmd>TroubleToggle workspace_diagnostics<cr>', 'workspace' },
+  d = { '<cmd>TroubleToggle document_diagnostics<cr>', 'document' },
+  q = { '<cmd>TroubleToggle quickfix<cr>', 'quickfix' },
+  l = { '<cmd>TroubleToggle loclist<cr>', 'loclist' },
+  r = { '<cmd>TroubleToggle lsp_references<cr>', 'references' },
 }
 lvim.builtin.which_key.mappings['sT'] = { '<cmd>Telescope grep_string<CR>', 'Grep string' }
 lvim.builtin.which_key.mappings['ss'] = { "<cmd>lua require('spectre').open()<CR>", 'Spectre' }
