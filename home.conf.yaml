@@ -1,0 +1,31 @@
+---
+# Home
+- defaults:
+    link:
+      create: true
+
+- link:
+    ~/.Xresources:
+    ~/.config/alacritty/alacritty.yml:
+      path: "config/alacritty/alacritty.yml.home"
+    ~/.config/amfora/config.toml:
+      path: "config/amfora/config.toml"
+    ~/.config/clipcat:
+      path: "config/clipcat"
+    ~/.config/i3:
+      path: "config/i3"
+    ~/.config/ncmpcpp/config:
+      path: "config/ncmpcpp/config"
+    ~/.config/mpd/mpd.conf:
+      path: "config/mpd/mpd.conf"
+    ~/.config/polybar:
+      path: "config/polybar"
+    ~/.config/rofi:
+      path: "config/rofi"
+    ~/.gitconfig:
+    ~/.p10k.zsh:
+      path: "p10k.zsh.home"
+    ~/.xinitrc:
+    ~/.zshrc:
+      path: "zshrc.home"
+

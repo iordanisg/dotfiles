@@ -1,0 +1,17 @@
+---
+# Work
+- defaults:
+    link:
+      if: '[ `uname` = Darwin ]'
+      create: true
+      force: true
+
+- link:
+    ~/.config/alacritty/alacritty.yml:
+      path: "config/alacritty/alacritty.yml.work"
+    ~/.p10k.zsh:
+      path: "p10k.zsh.work"
+    ~/.tmux.conf:
+      path: "tmux.conf.work"
+    ~/.zshrc:
+      path: "zshrc.work"
