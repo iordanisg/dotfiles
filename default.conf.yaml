@@ -17,3 +17,5 @@
 - link:
     ~/.config/bat/config:
       path: "config/bat/config"
+    ~/.config/lvim:
+      path: "config/lvim"
