@@ -1,9 +1,4 @@
 ---
-# Home
-- defaults:
-    link:
-      create: true
-
 - link:
     ~/.Xresources:
     ~/.config/alacritty/alacritty.yml:

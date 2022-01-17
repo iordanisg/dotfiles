@@ -1,11 +1,4 @@
 ---
-# Work
-- defaults:
-    link:
-      if: '[ `uname` = Darwin ]'
-      create: true
-      force: true
-
 - link:
     ~/.config/alacritty/alacritty.yml:
       path: "config/alacritty/alacritty.yml.work"
