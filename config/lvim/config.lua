@@ -189,6 +189,7 @@ formatters.setup({
 -- }
 local linters = require('lvim.lsp.null-ls.linters')
 linters.setup({
+  { exe = 'golangci_lint', filetypes = { 'go' } },
   { exe = 'flake8', filetypes = { 'python' } },
 })
 
