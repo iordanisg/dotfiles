@@ -306,6 +306,8 @@ lvim.plugins = {
       require('user.tmux')
     end,
   },
+  -- dev
+  { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
