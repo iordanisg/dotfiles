@@ -1,0 +1,15 @@
+---
+# Default
+- clean:
+    - "~"
+    - "~/.config"
+
+- create:
+    - "~/personal"
+    - "~/repos"
+    - "~/tmp"
+    - "~/vimwiki"
+
+- link:
+    ~/.config/bat/config:
+      path: "config/bat/config"
