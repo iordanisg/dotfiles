@@ -1,5 +1,9 @@
 ---
 # Default
+- defaults:
+    link:
+      create: true
+
 - clean:
     - "~"
     - "~/.config"
