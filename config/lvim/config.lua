@@ -11,7 +11,6 @@ an executable
 -- general
 vim.opt.timeoutlen = 250
 vim.opt.relativenumber = true
-vim.opt.background = 'light'
 vim.opt.foldlevel = 1
 
 lvim.log.level = 'warn'
