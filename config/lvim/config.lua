@@ -68,6 +68,20 @@ lvim.builtin.which_key.mappings['S'] = {
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", 'Restore last session' },
   Q = { "<cmd>lua require('persistence').stop()<cr>", 'Quit without saving session' },
 }
+lvim.builtin.which_key.mappings['U'] = { '<cmd>UndotreeToggle<CR>', 'Undotree' }
+lvim.builtin.which_key.mappings['o'] = {
+  name = 'Open',
+  f = { '<cmd>OpenGithubFile<cr>', 'Github file' },
+  p = { '<cmd>OpenGithubProject<cr>', 'Github project' },
+  s = { '<Plug>(openbrowser-smart-search)', 'smart search' },
+  u = { '<Plug>(openbrowser-open)', 'URL' },
+  w = { '<Plug>(openbrowser-search)', 'word' },
+}
+lvim.builtin.which_key.vmappings['o'] = {
+  name = 'Open',
+  s = { '<Plug>(openbrowser-smart-search)', 'smart search' },
+  u = { '<Plug>(openbrowser-open)', 'URL' },
+}
 lvim.builtin.which_key.mappings['r'] = { '<cmd>RnvimrToggle<CR>', 'Ranger' }
 lvim.builtin.which_key.mappings['t'] = {
   name = 'Diagnostics',
@@ -87,14 +101,29 @@ lvim.builtin.which_key.mappings['sS'] = {
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = 'dashboard'
+lvim.builtin.notify.active = true
 lvim.builtin.dap.active = true
-lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = 'left'
 lvim.builtin.nvimtree.show_icons.git = 1
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = 'maintained'
+-- lvim.builtin.treesitter.ensure_installed = {
+--   'bash',
+--   'c',
+--   'javascript',
+--   'json',
+--   'lua',
+--   'python',
+--   'typescript',
+--   'tsx',
+--   'css',
+--   'rust',
+--   'java',
+--   'yaml',
+-- }
 
 lvim.builtin.treesitter.ignore_install = { 'haskell' }
 lvim.builtin.treesitter.highlight.enabled = true
@@ -307,6 +336,34 @@ lvim.plugins = {
   },
   -- dev
   { 'rcarriga/nvim-dap-ui', requires = { 'mfussenegger/nvim-dap' } },
+  -- misc
+  {
+    'pwntester/octo.nvim',
+    event = 'BufRead',
+    config = function()
+      require('user.octo')
+    end,
+  },
+  {
+    'tyru/open-browser-github.vim',
+    requires = 'tyru/open-browser.vim',
+  },
+  {
+    'mbbill/undotree',
+    config = function()
+      require('user.undotree')
+    end,
+  },
+  {
+    'tools-life/taskwiki',
+  },
+  -- {
+  --   'nvim-neorg/neorg',
+  --   config = function()
+  --     require('user.neorg')
+  --   end,
+  --   requires = 'nvim-lua/plenary.nvim',
+  -- },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
